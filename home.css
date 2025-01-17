@@ -1,0 +1,207 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(90deg, #b0afb1, #585858, #b0afb1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+/* Hover Animation for Navbar Links */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaf6ff;
+    padding: 50px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-content h4 {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    display: inline-block;
+    background-color: #ff7a59;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.hero-content .btn:hover {
+    background-color: #ff5733;
+    transform: scale(1.1);
+}
+
+/* Hero Image Effects */
+.hero-image img {
+    max-width: 200px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-image img:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: slideInUp 1s ease-in-out;
+}
+
+.feature {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature h4 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.feature p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Promotions */
+.promotions {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: #f8f8f8;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.promo-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.promo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons in Promotions */
+.promo-text .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #ff7a59;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.promo-text .btn:hover {
+    background-color: #ff5733;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
