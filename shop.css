@@ -1,14 +1,14 @@
 /* General Reset */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
+    font-family: Times, sans-serif;
+    scroll-behavior: smooth;
+  }
 /* Body Styling */
 body {
-    background-color: #f9f9f9;
+    background-color: #f3f3f3;
     color: #333;
     line-height: 1.6;
 }
@@ -82,17 +82,17 @@ body {
 .search-bar {
     text-align: center;
     margin: 20px;
-  }
+}
 
-  .search-bar input {
+.search-bar input {
     width: 60%;
     padding: 10px;
     font-size: 1rem;
     border: 2px solid #005f73;
     border-radius: 5px;
-  }
+}
 
-  .search-bar button {
+.search-bar button {
     padding: 10px 20px;
     font-size: 1rem;
     color: white;
@@ -101,11 +101,11 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
-  }
+}
 
-  .search-bar button:hover {
+.search-bar button:hover {
     background: #94d2bd;
-  }
+}
 
 /* Shop Items Section */
 .shop-container {
@@ -162,12 +162,90 @@ body {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+
+#Year {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#site-footer {
+    background-color: #fffcfc;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #3d3d3d;
+    box-shadow: #7f7e7e;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1 1 20%;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1em;
+}
+
+.footer-column ul li a:hover {
+    color: #000;
+}
+
+.footer-column iframe {
+    width: 100%;
+    border: none;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.social-media a img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover img {
+    transform: scale(1.1);
+}
+
+
 /* Animation for Items */
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
