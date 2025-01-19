@@ -22,24 +22,94 @@
     </header>
 
     <main>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for medicines...">
+            <button onclick="searchProducts()">Search</button>
+        </div>
         <section class="shop-container">
-            <div class="shop-item">
-                <img src="images/item1.png" alt="Product 1">
-                <h3>Product 1</h3>
+            <div class="shop-item" data-name="Immunity">
+                <img src="images/item1.png" alt="Immunity">
+                <h3>Immunity</h3>
                 <p>₹500.00</p>
-                <button>Add to Cart</button>
+                <button>Buy Know</button>
             </div>
-            <div class="shop-item">
-                <img src="images/item2.png" alt="Product 2">
-                <h3>Product 2</h3>
+            <div class="shop-item" data-name="Cough Syrup">
+                <img src="images/item2.png" alt="Cough Syrup">
+                <h3>Cough Syrup</h3>
                 <p>₹750.00</p>
-                <button>Add to Cart</button>
+                <button>Buy Know</button>
             </div>
-            <div class="shop-item">
-                <img src="images/item3.png" alt="Product 3">
-                <h3>Product 3</h3>
+            <div class="shop-item" data-name="Tablet">
+                <img src="images/item3.png" alt="Calpol Tablet">
+                <h3>Calpol Tablet</h3>
                 <p>₹1200.00</p>
-                <button>Add to Cart</button>
+                <button>Buy Know</button>
+            </div>
+            <div class="shop-item" data-name="Pain Relief">
+                <img src="images/medicine2.jpg" alt="Pain Relief">
+                <h3>Pain Relief</h3>
+                <p>₹1200.00</p>
+                <button>Buy Know</button>
+            </div>
+            <div class="shop-item" data-name="Cold Relief">
+                <img src="images/medicine3.jpg" alt="Cold Relief">
+                <h3>Cold Relief</h3>
+                <p>₹1200.00</p>
+                <button>Buy Know</button>
+            </div>
+            <div class="shop-item" data-name="Cough Syrup">
+                <img src="images/medicine4.jpg" alt="Cough Syrup">
+                <h3>Cough Syrup</h3>
+                <p>$8.99</p>
+                <button>Buy Know</button>
+            </div>
+            <div class="shop-item" data-name="Vitamin C">
+                <img src="images/medicine5.jpg" alt="Vitamin C">
+                <h3>Vitamin C</h3>
+                <p>$14.99</p>
+                <button>Buy Know</button>
+            </div>
+            <div class="shop-item" data-name="Painkiller Gel">
+                <img src="images/medicine6.jpg" alt="Painkiller Gel">
+                <h3>Painkiller Gel</h3>
+                <p>$9.99</p>
+                <button>Buy Know</button>
+            </div>
+            <div class="shop-item" data-name="Allergy Relief">
+                <img src="images/medicine7.jpg" alt="Allergy Relief">
+                <h3>Allergy Relief</h3>
+                <p>$11.99</p>
+                <button>Buy Know</button>
+            </div>
+            <div class="shop-item" data-name="Antibiotic Cream">
+                <img src="images/medicine8.jpg" alt="Antibiotic Cream">
+                <h3>Antibiotic Cream</h3>
+                <p>$7.99</p>
+                <button>Buy Know</button>
+            </div>
+            <div class="shop-item" data-name="Digestive Aid">
+                <img src="images/medicine9.jpg" alt="Digestive Aid">
+                <h3>Digestive Aid</h3>
+                <p>$13.99</p>
+                <button>Buy Know</button>
+            </div>
+            <div class="shop-item" data-name="Skin Ointment">
+                <img src="images/medicine10.jpg" alt="Skin Ointment">
+                <h3>Skin Ointment</h3>
+                <p>$6.99</p>
+                <button>Buy Know</button>
+            </div>
+            <div class="shop-item" data-name="Muscle Relaxant">
+                <img src="images/medicine11.jpg" alt="Muscle Relaxant">
+                <h3>Muscle Relaxant</h3>
+                <p>$16.99</p>
+                <button>Buy Know</button>
+            </div>
+            <div class="shop-item" data-name="Ear Drops">
+                <img src="images/medicine12.jpg" alt="Ear Drops">
+                <h3>Ear Drops</h3>
+                <p>$5.99</p>
+                <button>Buy Know</button>
             </div>
         </section>
     </main>
@@ -47,3 +117,4 @@
     <script src="shop.js"></script>
 </body>
 </html>
+
