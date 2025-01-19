@@ -78,6 +78,35 @@ body {
     width: 100%;
 }
 
+/* search-bar css */
+.search-bar {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .search-bar input {
+    width: 60%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #005f73;
+    border-radius: 5px;
+  }
+
+  .search-bar button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: #005f73;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .search-bar button:hover {
+    background: #94d2bd;
+  }
+
 /* Shop Items Section */
 .shop-container {
     display: grid;
@@ -97,7 +126,7 @@ body {
 }
 
 .shop-item img {
-    max-width: 100%;
+    max-width: 45%;
     border-radius: 8px;
     margin-bottom: 10px;
 }
