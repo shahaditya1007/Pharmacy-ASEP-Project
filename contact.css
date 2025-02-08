@@ -12,35 +12,58 @@ body {
     color: #333;
     line-height: 1.6;
 }
-.custom-navbar {
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px 20px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     transition: transform 0.3s ease-in-out;
 }
 
-.custom-navbar .logo {
+.navbar.sticky {
+    transform: translateY(0);
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+.navbar .logo {
     font-size: 24px;
     font-weight: bold;
     color: white;
-    font-family: 'Times New Roman', serif;
 }
 
-.navbar-nav .nav-link {
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'Times New Roman', serif;
-    transition: color 0.3s ease;
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-right: 20px;
     position: relative;
 }
 
-.navbar-nav .nav-link:hover {
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
     color: #ffd700;
 }
 
 /* Hover Animation */
-.navbar-nav .nav-link::after {
+.navbar ul li a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -51,24 +74,10 @@ body {
     transition: width 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover::after {
+.navbar ul li a:hover::after {
     width: 100%;
 }
 
-/* Mobile Navbar Toggle Button */
-.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
-.navbar-toggler-icon {
-    background-color: white;
-    border-radius: 3px;
-}
-
-/* Prevent Overlap with Fixed Navbar */
-.contact-container {
-    padding-top: 100px; /* Adjust for fixed navbar */
-}
 
 .fixed-top {
     top: 0;
@@ -126,51 +135,5 @@ body {
 .contact-container button:hover {
     background-color: #2575fc;
 }
-/* Popup Modal */
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    z-index: 1001;
-    width: 300px;
-}
 
-.popup-content {
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.close-btn {
-    margin-top: 15px;
-    padding: 8px 16px;
-    background: #2575fc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    background: #6a11cb;
-}
-
-/* Dim Background when Popup is Open */
-body.popup-active::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-}
-
-
+ 
