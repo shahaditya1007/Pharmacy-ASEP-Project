@@ -1,11 +1,13 @@
 /* General Reset */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Times, sans-serif;
+    font-family: "Times New Roman", sans-serif;
     scroll-behavior: smooth;
-  }
+}
+
+
 /* Body Styling */
 body {
     background-color: #f3f3f3;
@@ -14,18 +16,20 @@ body {
 }
 
 /* Navbar Styling */
+/* Navbar Styling */
 .navbar {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    background: linear-gradient(90deg, #000000, #535353);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: transform 0.3s ease-in-out;
-}
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
 
 .navbar.sticky {
     transform: translateY(0);
@@ -36,10 +40,18 @@ body {
 }
 
 .navbar .logo {
+    display: flex; 
+    padding: 0px 20px;
+    align-items: center; 
+    justify-content: center; 
     font-size: 24px;
     font-weight: bold;
     color: white;
-}
+  }
+.navbar .logo img {
+    max-height: 50px;
+    margin-right: 10px;
+  }
 
 .navbar ul {
     display: flex;
@@ -47,6 +59,7 @@ body {
 }
 
 .navbar ul li {
+    margin-top: 10px;
     margin-right: 20px;
     position: relative;
 }
@@ -78,6 +91,7 @@ body {
     width: 100%;
 }
 
+
 /* Blog Section */
 .blog-container {
     padding: 50px 20px;
@@ -90,36 +104,28 @@ body {
     margin-bottom: 20px;
 }
 
-.blog-posts {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.post {
-    background-color: white;
-    padding: 20px;
+/* Blog Posts Styling */
+.card {
+    border: none;
     border-radius: 8px;
-    width: 300px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
 }
 
-.post:hover {
+.card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.post h2 {
+.card-body {
+    text-align: left;
+}
+
+.card h2 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.post p {
+.card p {
     font-size: 16px;
 }
 
@@ -138,42 +144,98 @@ body {
 
 /* Hidden Extra Content */
 .extra-content {
-    display: none; /* Ensure it starts hidden */
-    opacity: 0; /* Start with opacity 0 */
+    display: none ;
+    opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Show extra content */
 .extra-content.show {
     display: block;
-    opacity: 1; /* Fade in */
+    opacity: 1;
 }
+
+#site-footer {
+    background-color: #e4e4e4;
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-column {
+    flex: 1 1 20%;
+    margin: 10px;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.2em;  
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1em;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #000;
+  }
+  
+  .footer-column iframe {
+    width: 100%;
+    border: none;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .social-media a {
+    margin: 0 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-media a img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-media a:hover img {
+    transform: scale(1.1); 
+  }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-        display: none;
+    .navbar-nav {
+        text-align: center;
     }
 
-    .navbar ul li {
-        margin: 10px 0;
+    .blog-container {
+        padding: 30px 15px;
     }
 
-    .navbar .menu-toggle {
-        display: block;
-        cursor: pointer;
-        color: white;
-        font-size: 24px;
-    }
-
-    .blog-posts {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .post {
-        width: 90%;
+    .card {
+        width: 100%;
     }
 }
