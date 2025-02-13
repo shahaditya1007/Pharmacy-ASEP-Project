@@ -1,23 +1,29 @@
-$(document).ready(function() {
-    $('.read-more').on('click', function(e) {
-        e.preventDefault(); // Prevent default anchor click behavior
-        const $post = $(this).closest('.post');
-        const $extraContent = $post.find('.extra-content');
-
-        // Toggle the extra content
-        if ($extraContent.hasClass('show')) {
-            $extraContent.removeClass('show');
-        } else {
-            // Hide any other open extra content
-            $('.extra-content.show').removeClass('show');
-            $extraContent.addClass('show');
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    // Set initial state of extra content
+    document.querySelectorAll('.extra-content').forEach(content => {
+        content.style.display = 'none';
     });
 
-    // Close extra content when clicking outside
-    $(document).on('click', function(e) {
-        if (!$(e.target).closest('.post').length) {
-            $('.extra-content.show').removeClass('show');
-        }
+    // Add click handlers for read more buttons
+    document.querySelectorAll('.read-more').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const extraContent = this.parentElement.querySelector('.extra-content');
+            if (extraContent) {
+                if (extraContent.style.display === 'none') {
+                    extraContent.style.display = 'block';
+                    this.textContent = 'Read Less';
+                } else {
+                    extraContent.style.display = 'none';
+                    this.textContent = 'Read More';
+                }
+            }
+        });
     });
+
+    // Set copyright year
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 });

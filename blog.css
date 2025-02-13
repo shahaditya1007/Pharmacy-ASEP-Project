@@ -108,12 +108,12 @@ body {
 .card {
     border: none;
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
 }
 
 .card-body {
@@ -136,17 +136,22 @@ body {
     cursor: pointer;
     display: inline-block;
     transition: color 0.3s ease;
+    margin-top: 1rem;
 }
 
 .read-more:hover {
     color: #2575fc;
+    text-decoration: underline;
 }
 
 /* Hidden Extra Content */
 .extra-content {
     display: none ;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, all 0.3s ease;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
 }
 
 .extra-content.show {
