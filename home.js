@@ -11,12 +11,16 @@ window.addEventListener('scroll', function () {
 // Smooth Scroll for Navbar Links
 document.querySelectorAll('.navbar ul li a').forEach(link => {
     link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Only prevent default and do smooth scroll for hash links
+        const targetId = this.getAttribute('href');
+        if (targetId.startsWith('#')) {
+            e.preventDefault();
+            const targetSection = document.getElementById(targetId.substring(1));
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
+        // All other links will work normally
     });
 });
 
