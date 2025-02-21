@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Function to load blog content based on page number
     function loadBlogContent(page) {
         const blogContent = document.getElementById('blog-content');
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Add click handlers for read more buttons
         document.querySelectorAll('.read-more').forEach(button => {
-            button.addEventListener('click', function(e) {
+            button.addEventListener('click', function (e) {
                 e.preventDefault();
                 const extraContent = this.previousElementSibling;
                 if (extraContent) {
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add click handlers for pagination links
     document.querySelectorAll('.page-link').forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             const page = parseInt(this.getAttribute('data-page'));
             loadBlogContent(page);

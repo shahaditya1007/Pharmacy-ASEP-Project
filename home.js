@@ -36,15 +36,15 @@ window.addEventListener('scroll', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Add click handlers for wishlist buttons
     const wishlistButtons = document.querySelectorAll('.wishlist-btn');
-    
+
     wishlistButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             e.preventDefault();
             const productCard = this.closest('.product-card');
-            
+
             const product = {
                 id: productCard.dataset.id,
                 title: productCard.querySelector('p').textContent,
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Get existing wishlist or initialize empty array
             let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-            
+
             // Check if item already exists in wishlist
             if (!wishlist.some(item => item.id === product.id)) {
                 wishlist.push(product);
