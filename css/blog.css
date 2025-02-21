@@ -30,6 +30,40 @@ body {
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
+
+/* Top Bar */
+.top-bar {
+  background-color: #f8f8f8;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  animation: fadeIn 1s ease-in-out;
+  background: linear-gradient(-45deg, #831414, #e73c7e, #cf6c09, #9a2204);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.top-bar p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Top Bar animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .navbar.sticky {
   transform: translateY(0);
 }

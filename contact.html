@@ -10,21 +10,6 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo"><a href="home.html"><img src="images/main_logo.png"></a>Aditya's Pharma</div>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="track-order.html">Track Order</a></li>
-                <li><a href="wishlist.html">Wishlist</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <!-- Contact Form Section -->
     <main>
         <section class="contact-container">
@@ -83,43 +68,22 @@
         </div>
     </div>
 
-    <footer id="site-footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Our Location</h3>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.4420166840064!2d73.86562877489143!3d18.463626970911815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ea950f616219%3A0x321bdae2cea9f064!2sVishwakarma%20Institute%20of%20Technology%20(VIT)!5e0!3m2!1sen!2sin!4v1734410501055!5m2!1sen!2sin"
-                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div class="footer-column">
-                <h3>Navigate</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Catalog</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Journal</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Informations</h3>
-                <ul>
-                    <li><a href="#">Delivery</a></li>
-                    <li><a href="#">Return Policy</a></li>
-                </ul>
-            </div>
-            <div class="social-media">
-                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"></a>
-                <a href="https://www.twitter.com" target="_blank" aria-label="X (Twitter)"></a>
-                <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"></a>
-                <a href="https://www.pinterest.com" target="_blank" aria-label="Pinterest"></a>
-            </div>
-        </div>
-    </footer>
-
-    <footer id="Year">
-        <p>&copy; <span id="year"></span> Aditya's Pharma Store. All rights reserved.</p>
-    </footer>
+   <!-- Common header and footer -->
+   <script>
+    // Load common header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.body.insertAdjacentHTML('afterbegin', data);
+      });
+  
+    // Load common footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.body.insertAdjacentHTML('beforeend', data);
+      });
+    </script>
 
     <!-- Bootstrap & JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
