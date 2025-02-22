@@ -110,12 +110,12 @@ body {
 @media (max-width: 768px) {
     .navbar-nav {
         display: flex;
-        flex-direction: row ;
-        width: 70%;
+        flex-direction: column ;
+        width: 100%;
     }
 
     .navbar-nav .nav-item {
-        text-align: center;
+        text-align: left;
         width: 100%;
     }
 
