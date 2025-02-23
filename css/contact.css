@@ -170,14 +170,6 @@ body {
     background-color: #2575fc;
 }
 
-#Year {
-    background-color: #c0c0c0;
-    color: #333;
-    padding: 10px;
-    text-align: center;
-}
-
-
 @keyframes fadeIn {
     from {
         opacity: 0;
