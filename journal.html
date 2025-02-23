@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal - Aditya's Pharma</title>
+    <link rel="stylesheet" href="/css/journal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <main>
+        <section class="journal-container">
+            <div class="container">
+                <h1 class="mb-4 text-primary">Journal</h1>
+                <div class="journal-entry">
+                    <h2>The Importance of Medication Adherence: How to Stay on Track</h2>
+                    <p class="journal-meta">
+                        📅 Published on: <span id="publish-date"></span><br>
+                        ✍️ By Dr. Aditya, PharmD
+                    </p>
+                    <div class="journal-content">
+                        <h3>Introduction</h3>
+                        <p>Medication adherence is crucial for the successful treatment of chronic diseases such as diabetes, hypertension, and heart conditions. Yet, studies show that nearly 50% of patients do not take their medications as prescribed.</p>
+                        
+                        <h3>Why Medication Adherence Matters</h3>
+                        <ul>
+                            <li>Helps in effective disease management</li>
+                            <li>Reduces the risk of complications</li>
+                            <li>Prevents unnecessary hospitalizations</li>
+                        </ul>
+                        
+                        <h3>Tips to Stay Adherent</h3>
+                        <ul>
+                            <li>✅ Set daily reminders on your phone</li>
+                            <li>✅ Use pill organizers</li>
+                            <li>✅ Consult your pharmacist for medication synchronization</li>
+                            <li>✅ Keep track of your prescriptions with an online pharmacy app</li>
+                        </ul>
+                        
+                        <h3>Final Thoughts</h3>
+                        <p>Sticking to your prescribed medications ensures better health outcomes. If you have trouble remembering your doses, explore our medication reminder feature or speak with our expert pharmacists for guidance.</p>
+                        
+                        <p>💊 Need a refill? Order your medications hassle-free on <a href="home.html">Aditya's Pharma</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Common header and footer -->
+    <script>
+        // Load common header
+        fetch('header.html')
+          .then(response => response.text())
+          .then(data => {
+            document.body.insertAdjacentHTML('afterbegin', data);
+          });
+      
+        // Load common footer
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.body.insertAdjacentHTML('beforeend', data);
+          });
+
+        // Set publish date to the first day of the current month
+        const publishDate = new Date();
+        publishDate.setDate(1);
+        document.getElementById('publish-date').textContent = publishDate.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
+
+    <!-- Bootstrap & JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
