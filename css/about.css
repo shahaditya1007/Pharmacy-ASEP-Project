@@ -100,7 +100,6 @@
     margin-bottom: 20px;
 }
 
-
 /* Goals Section */
 .goals {
     padding: 60px 0;
@@ -156,6 +155,58 @@
     line-height: 1.6;
 }
 
+/* Tech Innovation Section */
+.tech-innovation {
+    padding: 60px 0;
+}
+
+.tech-innovation h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 2.2em;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tech-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+}
+
+.tech-card i {
+    font-size: 2.5em;
+    color: #6a11cb;
+    margin-bottom: 15px;
+}
+
+.tech-card h3 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 12px;
+}
+
+.tech-card p {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .mission-vision,
@@ -192,5 +243,18 @@
 
     .goal-card {
         padding: 20px;
+    }
+}
+
+/* Responsive Design for Tech Innovation */
+@media (max-width: 992px) {
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .tech-grid {
+        grid-template-columns: 1fr;
     }
 }
