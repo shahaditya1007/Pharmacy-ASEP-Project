@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2f3640 0%, #1a1f25 100%);
+    padding: 20px;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.6s ease-out;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.login-header .welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.login-header img {
+    max-width: 50px;
+    height: auto;
+}
+
+.login-header .pharmacy-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2f3640;
+    font-family: 'Arial', sans-serif;
+}
+
+.login-header h2 {
+    color: #2f3640;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.login-header p {
+    color: #666;
+    font-size: 15px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2f3640;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.form-group input:focus {
+    border-color: #ff7f50;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.1);
+}
+
+.password-field {
+    position: relative;
+    width: 100%;
+}
+
+.password-field input {
+    width: 100%;
+    padding: 12px 15px;
+    padding-right: 45px; /* Add space for the icon */
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.password-field input:focus {
+    border-color: #ff7f50;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.1);
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    transition: all 0.3s ease;
+    padding: 5px;
+    font-size: 16px;
+    z-index: 1;
+}
+
+.form-group .password-toggle:hover {
+    color: #2f3640;
+}
+
+.form-group .password-toggle.active {
+    color: #ff7f50;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.forgot-password {
+    color: #ff7f50;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #ff6b3d;
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #ff7f50, #ff6b3d);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 127, 80, 0.2);
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 127, 80, 0.3);
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+    font-size: 14px;
+}
+
+.login-footer a {
+    color: #ff7f50;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.login-footer a:hover {
+    color: #ff6b3d;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 20px;
+    }
+    
+    .login-header h2 {
+        font-size: 24px;
+    }
+    
+    .remember-forgot {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+}

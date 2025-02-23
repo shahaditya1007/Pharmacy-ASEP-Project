@@ -1,0 +1,42 @@
+/* Additional styles for signup page */
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.terms-check {
+    margin-bottom: 25px;
+}
+
+.terms-check a {
+    color: #ff7f50;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.terms-check a:hover {
+    color: #ff6b3d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .form-row {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .login-card {
+        padding: 30px 20px;
+    }
+}
+
+/* Override login card max-width for signup */
+.login-card {
+    max-width: 500px;
+}
