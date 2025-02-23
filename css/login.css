@@ -66,6 +66,7 @@
 }
 
 .login-header p {
+    padding-top: 5px;
     color: #666;
     font-size: 15px;
 }

@@ -22,7 +22,7 @@ window.onload = function() {
         }
 
         // Check credentials (hardcoded for testing)
-        if (username === 'admin' && password === 'admin123') {
+        if (username === 'admin' && password === '1234') {
             showMessage('Login successful! Redirecting...', 'green');
             // Save login state
             localStorage.setItem('isLoggedIn', 'true');
