@@ -17,6 +17,7 @@ window.addEventListener('scroll', () => {
   // Update last scroll position
   lastScrollY = window.scrollY;
 });
+
 function searchProducts() {
   const input = document.getElementById('search-input').value.toLowerCase();
   const products = document.querySelectorAll('.shop-item');
