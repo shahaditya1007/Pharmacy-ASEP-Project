@@ -1,0 +1,243 @@
+/* General Reset */
+/* General Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Times, sans-serif;
+    scroll-behavior: smooth;
+  }
+/* Body Styling */
+body {
+    background-color: #f3f3f3;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(90deg, #000000, #535353);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+.navbar.sticky {
+    transform: translateY(0);
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+.navbar .logo {
+    display: flex; 
+    padding: 10px 30px;
+    align-items: center; 
+    justify-content: center; 
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+.navbar .logo img {
+    max-height: 50px;
+    margin-right: 10px;
+  }
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+    margin-top: 10px;
+    position: relative;
+    right:10px ;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffd700;
+}
+
+/* Hover Animation */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+
+
+.contact-container {
+    padding-top: 80px;
+    padding: 50px 20px;
+    text-align: center;
+    /* position: relative;
+    top: 10vh; */
+}
+
+.contact-container h1 {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.contact-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-container form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.contact-container input,
+.contact-container textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-container button {
+    padding: 10px 20px;
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-container button:hover {
+    background-color: #2575fc;
+}
+
+#Year{
+    background-color: #c0c0c0;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #site-footer {
+    background-color: #e4e4e4;
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-column {
+    flex: 1 1 20%;
+    margin: 10px;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.2em;  
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1em;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #000;
+  }
+  
+  .footer-column iframe {
+    width: 100%;
+    border: none;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .social-media a {
+    margin: 0 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-media a img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-media a:hover img {
+    transform: scale(1.1); 
+  }
+
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
