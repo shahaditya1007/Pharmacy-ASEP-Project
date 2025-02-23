@@ -1,39 +1,48 @@
-function checkLogin() {
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+window.onload = function() {
+    // Get form elements
+    const form = document.getElementById('loginForm');
+    const message = document.getElementById('message');
 
-    let correctUsername = "admin";
-    let correctPassword = "1234";
-
-    if (username === correctUsername && password === correctPassword) {
-        document.getElementById("message").textContent = "Login Successful!";
-        document.getElementById("message").style.color = "green";
-
-        // Save login status
-        localStorage.setItem("isLoggedIn", "true");
-
-        setTimeout(() => {
-            window.location.href = "./home.html"; // Change to your home page
-
-        }, 1500);
-    } else {
-        document.getElementById("message").textContent = "Invalid Username or Password!";
-        document.getElementById("message").style.color = "red";
+    if (!form || !message) {
+        console.error('Required elements not found');
+        return;
     }
-}
 
-document.addEventListener('DOMContentLoaded', function() {
-    const togglePassword = document.querySelector('#togglePassword');
-    const password = document.querySelector('#password');
-
-    togglePassword.addEventListener('click', function() {
-        // Toggle the type attribute
-        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-        password.setAttribute('type', type);
+    form.onsubmit = function(e) {
+        e.preventDefault();
         
-        // Toggle the icon class
-        this.classList.toggle('fa-eye');
-        this.classList.toggle('fa-eye-slash');
-        this.classList.toggle('active');
-    });
-});
+        // Get input values
+        const username = document.getElementById('userInput').value;
+        const password = document.getElementById('password').value;
+
+        // Validate inputs
+        if (!username || !password) {
+            showMessage('Please fill in all fields', 'red');
+            return;
+        }
+
+        // Check credentials (hardcoded for testing)
+        if (username === 'admin' && password === 'admin123') {
+            showMessage('Login successful! Redirecting...', 'green');
+            // Save login state
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('username', username);
+            // Redirect
+            setTimeout(() => {
+                window.location.href = 'home.html';
+            }, 1500);
+        } else {
+            showMessage('Invalid username or password', 'red');
+            document.getElementById('password').value = '';
+        }
+    };
+
+    function showMessage(text, color) {
+        message.style.display = 'block';
+        message.style.color = color;
+        message.style.padding = '10px';
+        message.style.marginBottom = '10px';
+        message.style.textAlign = 'center';
+        message.textContent = text;
+    }
+};

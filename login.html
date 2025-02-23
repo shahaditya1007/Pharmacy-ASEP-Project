@@ -5,27 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="login-container">
         <div class="login-card">
             <div class="login-header">
-                <div class="welcome-container">
-                    <img src="/images/main_logo.png" alt="Logo">
-                    <h2>Welcome Back</h2>
-                </div>
+                <img src="/images/main_logo.png" alt="Logo">
+                <h2>Welcome Back</h2>
                 <p>Enter your credentials to access your account</p>
             </div>
-            <form>
-                <!-- Form groups for username/email and password -->
+            <!-- Add message div for errors/success -->
+            <div id="message" style="display: none;"></div>
+            
+            <form id="loginForm">
                 <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="Enter your email">
+                    <label>Username or Email</label>
+                    <input type="text" id="userInput" placeholder="Enter your username or email" required>
                 </div>
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="password" id="password" placeholder="Enter your password">
+                    <input type="password" id="password" placeholder="Enter your password" required>
                 </div>
                 <div class="remember-forgot">
                     <label class="remember-me">
@@ -37,7 +36,7 @@
                 <button type="submit" class="login-button">Log In</button>
             </form>
             <div class="login-footer">
-                Don't have an account?<a href="#">Sign up</a>
+                Don't have an account?<a href="signup.html">Sign up</a>
             </div>
         </div>
     </div>
