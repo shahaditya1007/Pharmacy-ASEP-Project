@@ -46,6 +46,12 @@ body {
     margin-bottom: 15px;
 }
 
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 .social-icons a {
     color: #007bff;
     margin: 0 10px;
