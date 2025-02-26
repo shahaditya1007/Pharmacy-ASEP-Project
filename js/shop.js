@@ -18,17 +18,50 @@ window.addEventListener('scroll', () => {
   lastScrollY = window.scrollY;
 });
 
-function searchProducts() {
-  const input = document.getElementById('search-input').value.toLowerCase();
-  const products = document.querySelectorAll('.shop-item');
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const shopItems = document.querySelectorAll('.shop-item');
+    
+    // Filter functionality
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            btn.classList.add('active');
+            
+            const category = btn.dataset.category;
+            
+            shopItems.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
 
-  products.forEach(product => {
-    const name = product.dataset.name.toLowerCase();
-    if (name.includes(input)) {
-      product.style.display = 'block';
-    } else {
-      product.style.display = 'none';
-    }
-  });
-}
+    // Enhanced search functionality
+    const searchInput = document.getElementById('search-input');
+    let searchTimeout;
+
+    searchInput.addEventListener('input', () => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            shopItems.forEach(item => {
+                const itemName = item.dataset.name.toLowerCase();
+                const itemCategory = item.dataset.category.toLowerCase();
+                
+                if (itemName.includes(searchTerm) || itemCategory.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }, 300);
+    });
+});
 

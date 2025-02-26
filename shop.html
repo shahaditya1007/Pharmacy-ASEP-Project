@@ -11,117 +11,142 @@
 
 <body>
     <main>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search for medicines...">
-            <button onclick="searchProducts()">Search</button>
+        <div class="shop-controls">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for medicines...">
+                <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="immunity">Immunity</button>
+                <button class="filter-btn" data-category="pain-relief">Pain Relief</button>
+                <button class="filter-btn" data-category="cold-flu">Cold & Flu</button>
+                <button class="filter-btn" data-category="vitamins">Vitamins</button>
+            </div>
         </div>
         <section class="shop-container">
-            <div class="shop-item" data-name="Immunity">
-                <img src="images/item1.png" alt="Immunity">
-                <h3>Immunity</h3>
+            <!-- Immunity Category -->
+            <div class="shop-item" data-name="Immunity" data-category="immunity">
+                <img src="images/item1.png" alt="Immunity Booster">
+                <h3>Immunity Booster</h3>
                 <p>₹692.00</p>
-                <a href="https://amzn.in/d/iRI9QFh" class="buy-now-btn" value="_blank">
+                <a href="https://amzn.in/d/iRI9QFh" class="buy-now-btn" target="_blank">
                     <button>Buy now</button>
                 </a>
             </div>
-            <div class="shop-item" data-name="Cough Syrup">
+
+            <!-- Cold & Flu Category -->
+            <div class="shop-item" data-name="Cough Syrup" data-category="cold-flu">
                 <img src="images/item2.png" alt="Cough Syrup">
                 <h3>Cough Syrup</h3>
                 <p>₹174.00</p>
-                <a href="https://amzn.in/d/8aIipJg" class="buy-now-btn" value="_blank">
+                <a href="https://amzn.in/d/8aIipJg" class="buy-now-btn" target="_blank">
                     <button>Buy now</button>
                 </a>
             </div>
-            <div class="shop-item" data-name="Tablet">
-                <img src="images/item3.png" alt="Calpol Tablet">
-                <h3>Calpol Tablet</h3>
-                <p>₹12.00</p>
-                <a href="https://amzn.in/d/67V4fbn" class="buy-now-btn" value="_blank">
-                    <button>Buy now</button>
-                </a>
-            </div>
-            <div class="shop-item" data-name="Pain Relief">
-                <img src="images/pain relief.jpg" alt="Pain Relief">
-                <h3>Pain Relief</h3>
-                <p>₹570.00</p>
-                <a href="https://amzn.in/d/do9SpgB" class="buy-now-btn" value="_blank">
-                    <button>Buy now</button>
-                </a>
-            </div>
-            <div class="shop-item" data-name="Cold Relief">
+            
+            <div class="shop-item" data-name="Cold Relief" data-category="cold-flu">
                 <img src="images/cold relief.jpg" alt="Cold Relief">
                 <h3>Cold Relief</h3>
                 <p>₹119.00</p>
-                <a href="https://amzn.in/d/aZCIQSY" class="buy-now-btn" value="_blank">
+                <a href="https://amzn.in/d/aZCIQSY" class="buy-now-btn" target="_blank">
                     <button>Buy now</button>
                 </a>
             </div>
-            <div class="shop-item" data-name="Paracetamol">
+
+            <!-- Pain Relief Category -->
+            <div class="shop-item" data-name="Calpol Tablet" data-category="pain-relief">
+                <img src="images/item3.png" alt="Calpol Tablet">
+                <h3>Calpol Tablet</h3>
+                <p>₹12.00</p>
+                <a href="https://amzn.in/d/67V4fbn" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+
+            <div class="shop-item" data-name="Pain Relief" data-category="pain-relief">
+                <img src="images/pain relief.jpg" alt="Pain Relief">
+                <h3>Pain Relief</h3>
+                <p>₹570.00</p>
+                <a href="https://amzn.in/d/do9SpgB" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+
+            <div class="shop-item" data-name="Paracetamol" data-category="pain-relief">
                 <img src="images/paracetamol.jpg" alt="Paracetamol">
                 <h3>Paracetamol</h3>
                 <p>₹24.00</p>
-                <a href="https://amzn.in/d/3d1kjpC" class="buy-now-btn" value="_blank">
+                <a href="https://amzn.in/d/3d1kjpC" class="buy-now-btn" target="_blank">
                     <button>Buy now</button>
                 </a>
             </div>
-            <div class="shop-item" data-name="Vitamin C">
-                <img src="images/vitamin c.jpg" alt="Vitamin C">
-                <h3>Vitamin C</h3>
-                <p>₹474.00</p>
-                <a href="https://amzn.in/d/71h69tD" class="buy-now-btn" value="_blank">
-                    <button>Buy now</button>
-                </a>
-            </div>
-            <div class="shop-item" data-name="Painkiller Gel">
+
+            <div class="shop-item" data-name="Painkiller Gel" data-category="pain-relief">
                 <img src="images/painkiller gel.jpg" alt="Painkiller Gel">
                 <h3>Painkiller Gel</h3>
                 <p>₹151.00</p>
-                <a href="https://amzn.in/d/3Ug7FFG" class="buy-now-btn" value="_blank">
+                <a href="https://amzn.in/d/3Ug7FFG" class="buy-now-btn" target="_blank">
                     <button>Buy now</button>
                 </a>
             </div>
-            <div class="shop-item" data-name="Allergy Relief">
+
+            <!-- Vitamins Category -->
+            <div class="shop-item" data-name="Vitamin C" data-category="vitamins">
+                <img src="images/vitamin c.jpg" alt="Vitamin C">
+                <h3>Vitamin C</h3>
+                <p>₹474.00</p>
+                <a href="https://amzn.in/d/71h69tD" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+
+            <!-- Additional Items -->
+            <div class="shop-item" data-name="Allergy Relief" data-category="immunity">
                 <img src="images/allergy relief.jpg" alt="Allergy Relief">
                 <h3>Allergy Relief</h3>
                 <p>₹439.00</p>
-                <a href="https://amzn.in/d/5rlllsj" class="buy-now-btn" value="_blank">
+                <a href="https://amzn.in/d/5rlllsj" class="buy-now-btn" target="_blank">
                     <button>Buy now</button>
                 </a>
             </div>
-            <div class="shop-item" data-name="Antibiotic Cream">
+
+            <div class="shop-item" data-name="Antibiotic Cream" data-category="pain-relief">
                 <img src="images/Antibiotic Cream.jpg" alt="Antibiotic Cream">
                 <h3>Antibiotic Cream</h3>
                 <p>₹73.00</p>
-                <a href="https://amzn.in/d/bD7uZZo" class="buy-now-btn" value="_blank">
+                <a href="https://amzn.in/d/bD7uZZo" class="buy-now-btn" target="_blank">
                     <button>Buy now</button>
                 </a>
             </div>
-            <div class="shop-item" data-name="Digestive Aid">
+
+            <div class="shop-item" data-name="Digestive Aid" data-category="immunity">
                 <img src="images/Digestive Aid.jpg" alt="Digestive Aid">
                 <h3>Digestive Aid</h3>
                 <p>₹1563.00</p>
-                <a href="https://amzn.in/d/5UP4Oik" class="buy-now-btn" value="_blank">
+                <a href="https://amzn.in/d/5UP4Oik" class="buy-now-btn" target="_blank">
                     <button>Buy now</button>
                 </a>
             </div>
-            <div class="shop-item" data-name="Skin Ointment">
+
+            <div class="shop-item" data-name="Skin Ointment" data-category="pain-relief">
                 <img src="images/Skin Ointment.jpg" alt="Skin Ointment">
                 <h3>Skin Ointment</h3>
                 <p>₹180.00</p>
-
-                <a href="https://amzn.in/d/c6sZuCd" class="buy-now-btn" value="_blank">
+                <a href="https://amzn.in/d/c6sZuCd" class="buy-now-btn" target="_blank">
                     <button>Buy now</button>
                 </a>
             </div>
-            <div class="shop-item" data-name="Muscle Relaxant">
+
+            <div class="shop-item" data-name="Muscle Relaxant" data-category="pain-relief">
                 <img src="images/Muscle Relaxant.jpg" alt="Muscle Relaxant">
                 <h3>Muscle Relaxant</h3>
                 <p>₹711.00</p>
-                <a href="https://amzn.in/d/4iCeRVD" class="buy-now-btn" value="_blank">
+                <a href="https://amzn.in/d/4iCeRVD" class="buy-now-btn" target="_blank">
                     <button>Buy now</button>
                 </a>
             </div>
-
         </section>
     </main>
 
