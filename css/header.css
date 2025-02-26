@@ -110,6 +110,29 @@ body {
     width: 40px;
 }
 
+/* Login Button Styles */
+.nav-link.login-btn {
+    color: #fe792c !important;
+    padding: 8px 20px;
+    font-weight: 600;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(233, 157, 131, 0.112);
+    transition: all 0.3s ease;
+}
+
+.nav-link.login-btn:hover {
+    color: #f0bf9b !important;
+    border-color: #edb387;
+    background: rgba(231, 60, 126, 0.2);
+    transform: translateY(-1px);
+}
+
+.nav-link.login-btn::after {
+    display: none;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .navbar-nav {
