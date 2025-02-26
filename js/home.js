@@ -8,10 +8,20 @@ window.addEventListener('scroll', function () {
     }
 });
 
+// Loader functionality with customizable duration
+window.addEventListener('load', () => {
+    const loader = document.querySelector('.loader-wrapper');
+    const duration = parseInt(loader.dataset.duration) || 500; 
+    
+    setTimeout(() => {
+        loader.classList.add('fade-out');
+    }, duration);
+});
+    
+
 // Smooth Scroll for Navbar Links
 document.querySelectorAll('.navbar ul li a').forEach(link => {
     link.addEventListener('click', function (e) {
-        // Only prevent default and do smooth scroll for hash links
         const targetId = this.getAttribute('href');
         if (targetId.startsWith('#')) {
             e.preventDefault();
@@ -20,7 +30,6 @@ document.querySelectorAll('.navbar ul li a').forEach(link => {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             }
         }
-        // All other links will work normally
     });
 });
 
@@ -37,7 +46,6 @@ window.addEventListener('scroll', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Add click handlers for wishlist buttons
     const wishlistButtons = document.querySelectorAll('.wishlist-btn');
 
     wishlistButtons.forEach(button => {

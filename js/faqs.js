@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (targetCollapse.classList.contains("show")) {
                     targetCollapse.scrollIntoView({ behavior: "smooth", block: "center" });
                 }
-            }, 300); // Delayed scrolling for smooth transition
+            }, 300); 
         });
     });
 
