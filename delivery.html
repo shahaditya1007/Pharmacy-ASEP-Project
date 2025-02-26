@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery - Pharmacy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/delivery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <main>
+        <section class="delivery-section">
+            <h1>Medicine Delivery Service</h1>
+            <div class="delivery-form">
+                <p class="form-intro">Get your medications delivered safely to your doorstep. Upload your prescription and we'll take care of the rest.</p>
+                <form id="deliveryForm">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Delivery Address:</label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prescription">Upload Prescription (if any):</label>
+                        <input type="file" id="prescription" name="prescription">
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Special Instructions:</label>
+                        <textarea id="notes" name="notes"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Request Delivery</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+   <!-- Common header and footer -->
+   <script>
+    // Load common header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.body.insertAdjacentHTML('afterbegin', data);
+      });
+  
+    // Load common footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.body.insertAdjacentHTML('beforeend', data);
+      });
+    </script>
+
+</body>
+</html>

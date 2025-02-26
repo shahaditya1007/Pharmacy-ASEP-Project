@@ -1,0 +1,117 @@
+.delivery-section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0f5ff 0%, #ffffff 100%);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.delivery-section h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.delivery-section h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.delivery-form {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.8rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #fcfcfc;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input[type="file"] {
+    padding: 0.8rem 1rem;
+    padding-left: 1rem;
+    background-color: #f8f9fa;
+    border: 2px dashed var(--primary-color);
+    opacity: 0.8;
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .delivery-section {
+        margin: 2rem auto;
+        padding: 1rem;
+    }
+    
+    .delivery-form {
+        padding: 1.5rem;
+    }
+    
+    .delivery-section h1 {
+        font-size: 2rem;
+    }
+}
