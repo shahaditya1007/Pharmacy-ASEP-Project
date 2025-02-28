@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('signupForm');
     const messageContainer = document.getElementById('messageContainer');
 
+    if (!messageContainer) {
+        console.error("messageContainer not found in the DOM!");
+        return;
+    }
+
     // Password toggle functionality
     function setupPasswordToggle(passwordId, toggleId) {
         const passwordInput = document.getElementById(passwordId);
@@ -26,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         messageContainer.style.display = 'block';
     }
 
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
 
         // Get all form values
@@ -64,39 +69,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         try {
-            // Get existing users or initialize empty array
-            const users = JSON.parse(localStorage.getItem('users') || '[]');
+            const response = await fetch('/signup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({
+                    first_name: firstName,
+                    last_name: lastName,
+                    email: email,
+                    phone: phone,
+                    password: password
+                })
+            });
 
-            // Check if email already exists
-            if (users.some(user => user.email === email)) {
-                showMessage('Email already registered', true);
-                return;
+            const result = await response.text();
+            if (response.ok) {
+                showMessage('Account created successfully! Redirecting to login...', false);
+                form.reset();
+                setTimeout(() => {
+                    window.location.href = '/login';
+                }, 2000);
+            } else {
+                showMessage(result, true);
             }
-
-            // Create new user object
-            const newUser = {
-                firstName,
-                lastName,
-                email,
-                phone,
-                password,
-                createdAt: new Date().toISOString()
-            };
-
-            // Add to users array
-            users.push(newUser);
-            localStorage.setItem('users', JSON.stringify(users));
-
-            // Show success message
-            showMessage('Account created successfully! Redirecting to login...', false);
-
-            // Clear form
-            form.reset();
-
-            // Redirect to login page
-            setTimeout(() => {
-                window.location.href = 'login.html';
-            }, 2000);
 
         } catch (error) {
             console.error('Error during signup:', error);
