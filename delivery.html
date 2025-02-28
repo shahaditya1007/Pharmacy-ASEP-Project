@@ -37,12 +37,14 @@
                     </div>
                     <button type="submit" class="submit-btn">Request Delivery</button>
                 </form>
+                <div id="successMessage" class="success-message hidden">
+                    Thank you! Your delivery request has been submitted successfully. We will contact you shortly.
+                </div>
             </div>
         </section>
     </main>
-
-   <!-- Common header and footer -->
-   <script>
+    <script src="js/delivery.js"></script>
+    <script>
     // Load common header
     fetch('header.html')
       .then(response => response.text())
