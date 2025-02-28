@@ -16,28 +16,423 @@
                 <input type="text" id="search-input" placeholder="Search for medicines...">
                 <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
             </div>
-            
+
             <div class="category-filters">
                 <button class="filter-btn active" data-category="all">All</button>
-                <button class="filter-btn" data-category="immunity">Immunity</button>
-                <button class="filter-btn" data-category="pain-relief">Pain Relief</button>
-                <button class="filter-btn" data-category="cold-flu">Cold & Flu</button>
-                <button class="filter-btn" data-category="vitamins">Vitamins</button>
+                <button class="filter-btn" data-category="Ayurveda">Ayurveda</button>
+                <button class="filter-btn" data-category="Antibiotics">Antibiotics</button>
+                <button class="filter-btn" data-category="Homeopathic">Homeopathic</button>
+                <button class="filter-btn" data-category="Allopathic">Allopathic</button>
+                <button class="filter-btn" data-category="Pediatrics">Pediatrics</button>
             </div>
         </div>
         <section class="shop-container">
-            <!-- Immunity Category -->
-            <div class="shop-item" data-name="Immunity" data-category="immunity">
-                <img src="images/item1.png" alt="Immunity Booster">
-                <h3>Immunity Booster</h3>
-                <p>₹692.00</p>
-                <a href="https://amzn.in/d/iRI9QFh" class="buy-now-btn" target="_blank">
+            <!-- Ayurveda Category -->
+            <div class="shop-item" data-name="Kerala Ayurveda Chyavanprash"  data-category="Ayurveda">
+                <img src="https://m.media-amazon.com/images/I/514Pr4+gvvL.SX679.jpg" alt="Chyavanprash">
+                <h3>Kerala Ayurveda Chyavanprash</h3>
+                <p>₹287.00</p>
+                <a href="https://amzn.in/d/ebzmS1a" class="buy-now-btn" target="_blank"><button>Buy now</button></a>
+            </div>
+            <div class="shop-item" data-name="Apollo Ayurvedic Pain Relief Ointment" data-category="Ayurveda">
+                <img src="https://m.media-amazon.com/images/I/51Qy-VAiiKL.SX679.jpg" alt="Pain Relief Ointment">
+                <h3>Apollo Ayurvedic Pain Relief Ointment</h3>
+                <p>₹69.00</p>
+                <a href="https://amzn.in/d/6giDdBp" class="buy-now-btn" target="_blank"><button>Buy now</button></a>
+            </div>
+            <div class="shop-item" data-name="Virgo Acineutra Liquid"  data-category="Ayurveda">
+                <img src="https://m.media-amazon.com/images/I/81nI8hRLTJL.SX679.jpg" alt="Acineutra Liquid">
+                <h3>Virgo Acineutra Liquid</h3>
+                <p>₹169.00</p>
+                <a href="https://amzn.in/d/fE1ZuQ9" class="buy-now-btn" target="_blank"><button>Buy now</button></a>
+            </div>
+            <div class="shop-item" data-name="AVP Haridrakhandam"  data-category="Ayurveda">
+                <img src="https://m.media-amazon.com/images/I/6129CJ7uU0L.SX679.jpg" alt="Haridrakhandam">
+                <h3>AVP Haridrakhandam</h3>
+                <p>₹310.00</p>
+                <a href="https://amzn.in/d/1kN7BIs" class="buy-now-btn" target="_blank"><button>Buy now</button></a>
+            </div>
+            <div class="shop-item" data-name="AVP Nalpamaradi Coconut Oil Balm"  data-category="Ayurveda">
+                <img src="https://m.media-amazon.com/images/I/71XmywVTHpL.SX679.jpg" alt="Nalpamaradi Balm">
+                <h3>AVP Nalpamaradi Coconut Oil Balm</h3>
+                <p>₹294.00</p>
+                <a href="https://amzn.in/d/22kxEZ9" class="buy-now-btn" target="_blank"><button>Buy now</button></a>
+            </div>
+            <div class="shop-item" data-name="Patanjali Divya Arshkalp Vati" data-category="Ayurveda">
+                <img src="https://m.media-amazon.com/images/I/61Ja0sigQSL.SX679.jpg" alt="Arshkalp Vati">
+                <h3>Patanjali Divya Arshkalp Vati</h3>
+                <p>₹247.00</p>
+                <a href="https://amzn.in/d/0AexwXp" class="buy-now-btn" target="_blank"><button>Buy now</button></a>
+            </div>
+            <div class="shop-item" data-name="Miduty Liver Detox Supplement"  data-category="Ayurveda">
+                <img src="https://m.media-amazon.com/images/I/618ZjInjLjL.SX679.jpg" alt="Liver Detox">
+                <h3>Miduty Liver Detox Supplement</h3>
+                <p>₹1,499.00</p>
+                <a href="https://amzn.in/d/3jU17AV" class="buy-now-btn" target="_blank"><button>Buy now</button></a>
+            </div>
+            <div class="shop-item" data-name="Adarsh Ayurvedic Face Pack"  data-category="Ayurveda">
+                <img src="https://m.media-amazon.com/images/I/71RB-whY9xL.SX355.jpg" alt="Face Pack">
+                <h3>Adarsh Ayurvedic Face Pack</h3>
+                <p>₹120.00</p>
+                <a href="https://amzn.in/d/eUNfIC9" class="buy-now-btn" target="_blank"><button>Buy now</button></a>
+            </div>
+            <div class="shop-item" data-name="Nuskhe Ayurvedic Anti Blemish Cream" data-category="Ayurveda">
+                <img src="https://m.media-amazon.com/images/I/51653jYJEhL.SY355.jpg" alt="Anti Blemish Cream">
+                <h3>Nuskhe Ayurvedic Anti Blemish Cream</h3>
+                <p>₹519.00</p>
+                <a href="https://amzn.in/d/7fDaNZL" class="buy-now-btn" target="_blank"><button>Buy now</button></a>
+            </div>
+            <div class="shop-item" data-name="Khajuraho Ayurvedic Sciatica Care Syrup" data-category="Ayurveda">
+                <img src="https://m.media-amazon.com/images/I/41Ym9EMSsTL.SY450_PIbundle-3,TopRight,0,0_AA450SH20.jpg" alt="Sciatica Care Syrup">
+                <h3>Khajuraho Ayurvedic Sciatica Care Syrup</h3>
+                <p>₹324.00</p>
+                <a href="https://amzn.in/d/fk0FPgC" class="buy-now-btn" target="_blank"><button>Buy now</button></a>
+            </div>
+
+             <!-- Antibiotics Category -->
+             <div class="shop-item" data-name="Azithral 500" data-category="Antibiotics">
+                <img src="https://m.media-amazon.com/images/I/91j70liESUL.SX522.jpg" alt="Azithral 500">
+                <h3>Azithral 500 - Strip of 5 Tablets</h3>
+                <p>₹112</p>
+                <a href="https://amzn.in/d/anYz16J" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Neosporin-H" data-category="Antibiotics">
+                <img src="https://m.media-amazon.com/images/I/71OrDZj4PzL.SX522.jpg" alt="Neosporin-H">
+                <h3>Neosporin-H - Tube of 5 g</h3>
+                <p>₹73</p>
+                <a href="https://amzn.in/d/1K7uXvf" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Azithral XL 200Mg" data-category="Antibiotics">
+                <img src="https://m.media-amazon.com/images/I/71WbN+31Z+L.SX385.jpg" alt="Azithral XL 200Mg">
+                <h3>Azithral XL 200Mg - Bottle Of 60Ml Liquid</h3>
+                <p>₹194</p>
+                <a href="https://amzn.in/d/5kjleWB" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Sporidex 500" data-category="Antibiotics">
+                <img src="https://m.media-amazon.com/images/I/8100TMbe6yL.SX522.jpg" alt="Sporidex 500">
+                <h3>Sporidex 500 - Strip of 10 Capsules</h3>
+                <p>₹232</p>
+                <a href="https://amzn.in/d/6pfjdaP" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Zenflox-200" data-category="Antibiotics">
+                <img src="https://m.media-amazon.com/images/I/61PZ0Yi67pL.SX522.jpg" alt="Zenflox-200">
+                <h3>Zenflox-200 - Strip of 10 Tablets</h3>
+                <p>₹63</p>
+                <a href="https://amzn.in/d/be5AvGj" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Garacillin-500" data-category="Antibiotics">
+                <img src="https://m.media-amazon.com/images/I/81biendPSgL.SX679.jpg" alt="Garacillin-500">
+                <h3>ANOOPAM AYURVEDA PRIVATE LIMITED Garacillin-500 Medicine</h3>
+                <p>₹365</p>
+                <a href="https://amzn.in/d/6I6gZii" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Cefoloc 100mg" data-category="Antibiotics">
+                <img src="https://m.media-amazon.com/images/I/51FKsexXi8L.SY500.jpg" alt="Cefoloc 100mg">
+                <h3>Cefoloc 100mg/5ml - Bottle of 30ml Suspension</h3>
+                <p>₹68</p>
+                <a href="https://amzn.in/d/h3GHbTQ" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Metrogyl ER" data-category="Antibiotics">
+                <img src="https://m.media-amazon.com/images/I/81dlUKHZt4L.SX522.jpg" alt="Metrogyl ER">
+                <h3>Metrogyl ER - Strip of 10 Tablets</h3>
+                <p>₹70</p>
+                <a href="https://amzn.in/d/9ygNLkv" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Azee-250" data-category="Antibiotics">
+                <img src="https://m.media-amazon.com/images/I/81MAKR7GxyL.SX522.jpg" alt="Azee-250">
+                <h3>Azee-250 - Strip of 10 Tablets</h3>
+                <p>₹117</p>
+                <a href="https://amzn.in/d/iYtfFBj" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Mox 250 mg" data-category="Antibiotics">
+                <img src="https://m.media-amazon.com/images/I/91HT0rAKa2L.SX522.jpg" alt="Mox 250 mg">
+                <h3>Mox 250 mg - Strip of 15 Capsules</h3>
+                <p>₹34</p>
+                <a href="https://amzn.in/d/4s1OjwH" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+             <!-- Homeopathic Category -->
+             <div class="shop-item" data-name="KRIG'S 188 Hair Drops" data-category="Homeopathic">
+                <img src="https://m.media-amazon.com/images/I/71ZlgHrPQ6L.SX522.jpg" alt="KRIG'S 188 Hair Drops">
+                <h3>KRIG'S 188 Hair Drops Homeopathic 30ml</h3>
+                <p>₹297</p>
+                <a href="https://amzn.in/d/2aM5Cl0" class="buy-now-btn" target="_blank">
                     <button>Buy now</button>
                 </a>
             </div>
 
-            <!-- Cold & Flu Category -->
-            <div class="shop-item" data-name="Cough Syrup" data-category="cold-flu">
+            <div class="shop-item" data-name="HOMEOLAV R 40" data-category="Homeopathic">
+                <img src="https://m.media-amazon.com/images/I/61linOFoRwL.SX679.jpg" alt="HOMEOLAV R 40">
+                <h3>HOMEOLAV R 40 Homeopathic Medicine</h3>
+                <p>₹490</p>
+                <a href="https://amzn.in/d/8QAMFvx" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+
+            <div class="shop-item" data-name="SBL Moringa Oleifera" data-category="Homeopathic">
+                <img src="https://m.media-amazon.com/images/I/71R2qBWWAwL.SX679_PIbundle-2,TopRight,0,0_SX679SY800SH20.jpg" alt="SBL Moringa Oleifera">
+                <h3>SBL Moringa Oleifera Mother Tincture Q 100ml</h3>
+                <p>₹465</p>
+                <a href="https://amzn.in/d/fu6bOT9" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            
+            <div class="shop-item" data-name="Dr Patel's Thuja Ointment" data-category="Homeopathic">
+                <img src="https://m.media-amazon.com/images/I/6174nFYDXwL.SX679.jpg" alt="Thuja Ointment">
+                <h3>Dr Patel's Homeopathic Thuja Ointment</h3>
+                <p>₹90</p>
+                <a href="https://amzn.in/d/52B0obU" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            
+            <div class="shop-item" data-name="Dr. Bakshi's Throat Aid" data-category="Homeopathic">
+                <img src="https://m.media-amazon.com/images/I/51GWP4AbtuL.SX679.jpg" alt="Throat Aid">
+                <h3>Dr. Bakshi's Throat Aid Tablets</h3>
+                <p>₹172</p>
+                <a href="https://amzn.in/d/bxyxCgL" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            
+            <div class="shop-item" data-name="Bhargava Spondin Drop" data-category="Homeopathic">
+                <img src="https://m.media-amazon.com/images/I/51R9zhNtjML.jpg" alt="Spondin Drop">
+                <h3>Bhargava Spondin Drop Homeopathic - 30ml</h3>
+                <p>₹165</p>
+                <a href="https://amzn.in/d/31AUa25" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            
+            <div class="shop-item" data-name="SBL Calcarea Fluorica" data-category="Homeopathic">
+                <img src="https://m.media-amazon.com/images/I/61F2gj5wDPL.SX679.jpg" alt="Calcarea Fluorica">
+                <h3>SBL Calcarea Fluorica 6X Tablets</h3>
+                <p>₹284</p>
+                <a href="https://amzn.in/d/gt2mCls" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            
+            <div class="shop-item" data-name="Jiva Stress-Free Tablets" data-category="Homeopathic">
+                <img src="https://m.media-amazon.com/images/I/71MHmGzsovL.SX679.jpg" alt="Stress-Free Tablets">
+                <h3>Jiva Stress-Free Tablets</h3>
+                <p>₹162</p>
+                <a href="https://amzn.in/d/bvzcaWx" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            
+            <div class="shop-item" data-name="Arnica Montana 200Ch" data-category="Homeopathic">
+                <img src="https://m.media-amazon.com/images/I/41s-SdyfM+L.SX679.jpg" alt="Arnica Montana">
+                <h3>Arnica Montana 200Ch</h3>
+                <p>₹140</p>
+                <a href="https://amzn.in/d/hZTifGx" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            
+            <div class="shop-item" data-name="Bakson's Aller Aid" data-category="Homeopathic">
+                <img src="https://m.media-amazon.com/images/I/51hGsdFAqBL.SX679.jpg" alt="Aller Aid">
+                <h3>Dr. Bakshi's Aller Aid Tablets</h3>
+                <p>₹215</p>
+                <a href="https://amzn.in/d/ehalYUU" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+             <!-- Allopathic Category -->
+             <div class="shop-item" data-name="Prakruti L-AAYU Liver Detox" data-category="Allopathic">
+                <img src="https://m.media-amazon.com/images/I/71EHIdpGIBL.SX679.jpg" alt="Prakruti L-AAYU Liver Detox">
+                <h3>Prakruti L-AAYU Liver Detox</h3>
+                <p>₹799</p>
+                <a href="https://amzn.in/d/5ZMwQt0" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Himalaya Septilin Tablets" data-category="Allopathic">
+                <img src="https://m.media-amazon.com/images/I/41-t9z08s1L.SX679.jpg" alt="Himalaya Septilin Tablets">
+                <h3>Himalaya Septilin Tablets</h3>
+                <p>₹180</p>
+                <a href="https://amzn.in/d/06jNRsy" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Health Veda Organics Thyroplus" data-category="Allopathic">
+                <img src="https://m.media-amazon.com/images/I/71HnPhwqrlL.SX679.jpg" alt="Health Veda Organics Thyroplus">
+                <h3>Health Veda Organics Thyroplus</h3>
+                <p>₹539</p>
+                <a href="https://amzn.in/d/bmG7czC" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Ayuugain Happy Tummy Powder" data-category="Allopathic">
+                <img src="https://m.media-amazon.com/images/I/61IE2HvbYYL.SX679.jpg" alt="Ayuugain Happy Tummy Powder">
+                <h3>Ayuugain Happy Tummy Powder</h3>
+                <p>₹341</p>
+                <a href="https://amzn.in/d/aK9ZDKD" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Panchgavya Canc-A-Way" data-category="Allopathic">
+                <img src="https://m.media-amazon.com/images/I/91UPheNs44L.SX679.jpg" alt="Panchgavya Canc-A-Way">
+                <h3>Panchgavya Canc-A-Way</h3>
+                <p>₹630</p>
+                <a href="https://amzn.in/d/gbe7B3V" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Gynoveda Turmeric Tablets" data-category="Allopathic">
+                <img src="https://m.media-amazon.com/images/I/514Tsqdy2kL.SX679.jpg" alt="Gynoveda Turmeric Tablets">
+                <h3>Gynoveda Turmeric Tablets</h3>
+                <p>₹900</p>
+                <a href="https://amzn.in/d/0xBwgmG" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Kapiva BP Care Juice" data-category="Allopathic">
+                <img src="https://m.media-amazon.com/images/I/61wlShWr1RL.SX679.jpg" alt="Kapiva BP Care Juice">
+                <h3>Kapiva BP Care Juice</h3>
+                <p>₹802</p>
+                <a href="https://amzn.in/d/9RASktY" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Cholecon Plus" data-category="Allopathic">
+                <img src="https://m.media-amazon.com/images/I/71S4OruSJdL.SX679.jpg" alt="Cholecon Plus">
+                <h3>Cholecon Plus</h3>
+                <p>₹329</p>
+                <a href="https://amzn.in/d/7SBgTaL" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="ManSure ENERGIZER" data-category="Allopathic">
+                <img src="https://m.media-amazon.com/images/I/51rlSLvH8RL.SX679.jpg" alt="ManSure ENERGIZER">
+                <h3>ManSure ENERGIZER</h3>
+                <p>₹1,650</p>
+                <a href="https://amzn.in/d/83j4tH1" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Pankajakasthuri Breathe Eazy" data-category="Allopathic">
+                <img src="https://m.media-amazon.com/images/I/61mzhci8sHL.SX679.jpg" alt="Pankajakasthuri Breathe Eazy">
+                <h3>Pankajakasthuri Breathe Eazy</h3>
+                <p>₹168</p>
+                <a href="https://amzn.in/d/jclidAy" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <!-- Pediatrics Category -->
+            <div class="shop-item" data-name="YplayZ Soothe Operator Soothing Balm for Kids" data-category="Pediatrics">
+                <img src="https://m.media-amazon.com/images/I/711yOYZvuPL.SX522.jpg" alt="YplayZ Balm">
+                <h3>YplayZ Soothe Operator Soothing Balm for Kids</h3>
+                <p>₹807</p>
+                <a href="https://amzn.in/d/eXJFIzh" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+
+            <div class="shop-item" data-name="EQUALSTWO Baby Body Wash & Shampoo" data-category="Pediatrics">
+                <img src="https://m.media-amazon.com/images/I/51669mV+9UL.SX522.jpg" alt="Baby Body Wash">
+                <h3>EQUALSTWO Baby Body Wash & Shampoo</h3>
+                <p>₹449</p>
+                <a href="https://amzn.in/d/8Mjw7yZ" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            
+            <div class="shop-item" data-name="Jr. Sr. Baby Wipes" data-category="Pediatrics">
+                <img src="https://m.media-amazon.com/images/I/61sv4uXtJ6L.SX679_PIbundle-3,TopRight,0,0_AA679SH20.jpg" alt="Baby Wipes">
+                <h3>Jr. Sr. Baby Wipes</h3>
+                <p>₹159</p>
+                <a href="https://amzn.in/d/dVSgWI1" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+
+            <div class="shop-item" data-name="MamyPoko Pants All Night Absorb Baby Diapers" data-category="Pediatrics">
+                <img src="https://m.media-amazon.com/images/I/61h7WP+NerL.SX679.jpg" alt="Baby Diapers">
+                <h3>MamyPoko Pants All Night Absorb Baby Diapers</h3>
+                <p>₹626</p>
+                <a href="https://amzn.in/d/bZMzRb9" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            
+            <div class="shop-item" data-name="Cetaphil Baby Daily Lotion" data-category="Pediatrics">
+                <img src="https://m.media-amazon.com/images/I/61Af2V1PYRL.SX679.jpg" alt="Baby Lotion">
+                <h3>Cetaphil Baby Daily Lotion</h3>
+                <p>₹884</p>
+                <a href="https://amzn.in/d/cVyN12H" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            
+            <div class="shop-item" data-name="Babyorgano Swarnaprashan for Kids" data-category="Pediatrics">
+                <img src="https://m.media-amazon.com/images/I/613aEsmMZ5L.SX679.jpg" alt="Swarnaprashan">
+                <h3>Babyorgano Swarnaprashan for Kids</h3>
+                <p>₹598</p>
+                <a href="https://amzn.in/d/j50y4Pm" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            
+            <div class="shop-item" data-name="Luvlap Naturals Baby Tummy Roll" data-category="Pediatrics">
+                <img src="https://m.media-amazon.com/images/I/71sbdFrZe+L.SX679.jpg" alt="Tummy Roll">
+                <h3>Luvlap Naturals Baby Tummy Roll</h3>
+                <p>₹174</p>
+                <a href="https://amzn.in/d/jcwlvxY" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            
+            <div class="shop-item" data-name="Sukham Cold Clear Herbal Drops" data-category="Pediatrics">
+                <img src="https://m.media-amazon.com/images/I/61KZdLY4h7L.SX679.jpg" alt="Cold Clear Drops">
+                <h3>Sukham Cold Clear Herbal Drops</h3>
+                <p>₹320</p>
+                <a href="https://amzn.in/d/hdabTuJ" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+
+            <div class="shop-item" data-name="Babyorgano Nutriverse Cough & Cold Relief Gummies" data-category="Pediatrics">
+                <img src="https://m.media-amazon.com/images/I/61eIdf09R6L.SX679.jpg" alt="Cough Relief Gummies">
+                <h3>Babyorgano Nutriverse Cough & Cold Relief Gummies</h3>
+                <p>₹432</p>
+                <a href="https://amzn.in/d/dxrtx0I" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+            <div class="shop-item" data-name="Babyorgano Sitopaladi Churna or Churan" data-category="Pediatrics">
+                <img src="https://m.media-amazon.com/images/I/71VPNIqI--L.SX679.jpg" alt="Babyorgano Sitopaladi Churna or Churan">
+                <h3>Babyorgano Sitopaladi Churna or Churan</h3>
+                <p>₹341</p>
+                <a href=" https://amzn.in/d/77F5Yrm" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
+
+            <!-- Homeopathic Category
+            <div class="shop-item" data-name="Cough Syrup" data-category="Homeopathic">
                 <img src="images/item2.png" alt="Cough Syrup">
                 <h3>Cough Syrup</h3>
                 <p>₹174.00</p>
@@ -45,8 +440,8 @@
                     <button>Buy now</button>
                 </a>
             </div>
-            
-            <div class="shop-item" data-name="Cold Relief" data-category="cold-flu">
+
+            <div class="shop-item" data-name="Cold Relief" data-category="Homeopathic">
                 <img src="images/cold relief.jpg" alt="Cold Relief">
                 <h3>Cold Relief</h3>
                 <p>₹119.00</p>
@@ -54,18 +449,18 @@
                     <button>Buy now</button>
                 </a>
             </div>
-            
-            <div class="shop-item" data-name="Cold Relief" data-category="cold-flu">
+
+            <div class="shop-item" data-name="Cold Relief" data-category="Homeopathic">
                 <img src="images/honitus.jpg" alt="Cold Relief">
                 <h3>Honitus</h3>
                 <p>₹119.00</p>
                 <a href="https://amzn.in/d/0SZWstT" class="buy-now-btn" target="_blank">
                     <button>Buy now</button>
                 </a>
-            </div>
+            </div> -->
 
-            <!-- Pain Relief Category -->
-            <div class="shop-item" data-name="Calpol Tablet" data-category="pain-relief">
+            <!-- Antiobiotics Category
+            <div class="shop-item" data-name="Calpol Tablet" data-category="Antiobiotics">
                 <img src="images/item3.png" alt="Calpol Tablet">
                 <h3>Calpol Tablet</h3>
                 <p>₹12.00</p>
@@ -74,16 +469,18 @@
                 </a>
             </div>
 
-            <div class="shop-item" data-name="Pain Relief" data-category="pain-relief">
-                <img src="images/pain relief.jpg" alt="Pain Relief">
-                <h3>Pain Relief</h3>
+            <div class="shop-item" data-name="Antiobiotics" data-category="Antiobiotics">
+                <img src="images/Antiobiotics.jpg" alt="Antiobiotics">
+                <h3>Antiobiotics
+
+                </h3>
                 <p>₹570.00</p>
                 <a href="https://amzn.in/d/do9SpgB" class="buy-now-btn" target="_blank">
                     <button>Buy now</button>
                 </a>
             </div>
 
-            <div class="shop-item" data-name="Paracetamol" data-category="pain-relief">
+            <div class="shop-item" data-name="Paracetamol" data-category="Antiobiotics">
                 <img src="images/paracetamol.jpg" alt="Paracetamol">
                 <h3>Paracetamol</h3>
                 <p>₹24.00</p>
@@ -92,17 +489,17 @@
                 </a>
             </div>
 
-            <div class="shop-item" data-name="Painkiller Gel" data-category="pain-relief">
+            <div class="shop-item" data-name="Painkiller Gel" data-category="Antiobiotics">
                 <img src="images/painkiller gel.jpg" alt="Painkiller Gel">
                 <h3>Painkiller Gel</h3>
                 <p>₹151.00</p>
                 <a href="https://amzn.in/d/3Ug7FFG" class="buy-now-btn" target="_blank">
                     <button>Buy now</button>
                 </a>
-            </div>
+            </div> -->
 
-            <!-- Vitamins Category -->
-            <div class="shop-item" data-name="Vitamin C" data-category="vitamins">
+            <!-- Allopathic Category
+            <div class="shop-item" data-name="Vitamin C" data-category="Allopathic">
                 <img src="images/vitamin c.jpg" alt="Vitamin C">
                 <h3>Vitamin C</h3>
                 <p>₹474.00</p>
@@ -110,7 +507,7 @@
                     <button>Buy now</button>
                 </a>
             </div>
-            <div class="shop-item" data-name="Vitamin C" data-category="vitamins">
+            <div class="shop-item" data-name="Vitamin C" data-category="Allopathic">
                 <img src="images/vitamin d3k2.jpg" alt="Vitamin C">
                 <h3>Vitamin d3 k2</h3>
                 <p>₹499.00</p>
@@ -118,7 +515,7 @@
                     <button>Buy now</button>
                 </a>
             </div>
-            <div class="shop-item" data-name="Vitamin C" data-category="vitamins">
+            <div class="shop-item" data-name="Vitamin C" data-category="Allopathic">
                 <img src="images/vitamin b.jpg" alt="Vitamin C">
                 <h3>Vitamin b</h3>
                 <p>₹499.00</p>
@@ -126,9 +523,9 @@
                     <button>Buy now</button>
                 </a>
             </div>
-            
-            <!-- Additional Items -->
-            <div class="shop-item" data-name="Allergy Relief" data-category="immunity">
+
+            <!-- Additional Items 
+            <div class="shop-item" data-name="Allergy Relief" data-category="Ayurveda">
                 <img src="images/allergy relief.jpg" alt="Allergy Relief">
                 <h3>Allergy Relief</h3>
                 <p>₹439.00</p>
@@ -137,7 +534,7 @@
                 </a>
             </div>
 
-            <div class="shop-item" data-name="Antibiotic Cream" data-category="pain-relief">
+            <div class="shop-item" data-name="Antibiotic Cream" data-category="Antiobiotics">
                 <img src="images/Antibiotic Cream.jpg" alt="Antibiotic Cream">
                 <h3>Antibiotic Cream</h3>
                 <p>₹73.00</p>
@@ -146,7 +543,7 @@
                 </a>
             </div>
 
-            <div class="shop-item" data-name="Digestive Aid" data-category="immunity">
+            <div class="shop-item" data-name="Digestive Aid" data-category="Ayurveda">
                 <img src="images/Digestive Aid.jpg" alt="Digestive Aid">
                 <h3>Digestive Aid</h3>
                 <p>₹1563.00</p>
@@ -155,7 +552,7 @@
                 </a>
             </div>
 
-            <div class="shop-item" data-name="Skin Ointment" data-category="pain-relief">
+            <div class="shop-item" data-name="Skin Ointment" data-category="Antiobiotics">
                 <img src="images/Skin Ointment.jpg" alt="Skin Ointment">
                 <h3>Skin Ointment</h3>
                 <p>₹180.00</p>
@@ -164,7 +561,7 @@
                 </a>
             </div>
 
-            <div class="shop-item" data-name="Muscle Relaxant" data-category="pain-relief">
+            <div class="shop-item" data-name="Muscle Relaxant" data-category="Antiobiotics">
                 <img src="images/Muscle Relaxant.jpg" alt="Muscle Relaxant">
                 <h3>Muscle Relaxant</h3>
                 <p>₹711.00</p>
@@ -172,26 +569,35 @@
                     <button>Buy now</button>
                 </a>
             </div>
+             Pediatrics Category 
+            <div class="shop-item" data-name="Pediatrics" data-category="Pediatrics            ">
+                <img src="images/item1.png" alt="Ayurveda Booster">
+                <h3>Ayurveda Booster</h3>
+                <p>₹692.00</p>
+                <a href="https://amzn.in/d/iRI9QFh" class="buy-now-btn" target="_blank">
+                    <button>Buy now</button>
+                </a>
+            </div>
         </section>
-    </main>
+    </main> -->
 
     <!-- Common header and footer -->
     <script>
         // Load common header
         fetch('header.html')
-          .then(response => response.text())
-          .then(data => {
-            document.body.insertAdjacentHTML('afterbegin', data);
-          });
-      
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('afterbegin', data);
+            });
+
         // Load common footer
         fetch('footer.html')
-          .then(response => response.text())
-          .then(data => {
-            document.body.insertAdjacentHTML('beforeend', data);
-          });
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
     </script>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
