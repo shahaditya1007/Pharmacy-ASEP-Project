@@ -11,7 +11,7 @@ window.addEventListener('scroll', function () {
 // Loader functionality with customizable duration
 window.addEventListener('load', () => {
     const loader = document.querySelector('.loader-wrapper');
-    const duration = parseInt(loader.dataset.duration) || 500; 
+    const duration = parseInt(loader.dataset.duration) || 300; 
     
     setTimeout(() => {
         loader.classList.add('fade-out');
