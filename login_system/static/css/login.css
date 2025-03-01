@@ -108,7 +108,7 @@
 .password-field input {
     width: 100%;
     padding: 12px 15px;
-    padding-right: 45px; /* Add space for the icon */
+    padding-right: 45px;
     border: 2px solid #e1e1e1;
     border-radius: 8px;
     font-size: 15px;
@@ -218,7 +218,6 @@
     }
 }
 
-/* Responsive Design */
 @media (max-width: 480px) {
     .login-card {
         padding: 30px 20px;

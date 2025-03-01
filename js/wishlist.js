@@ -2,10 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const wishlistContainer = document.getElementById("wishlist-container");
 
     function displayWishlist() {
-        // Load wishlist items from localStorage
         const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-        // Clear container
         wishlistContainer.innerHTML = '';
 
         if (wishlist.length === 0) {
@@ -30,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Function to remove item from wishlist
     window.removeFromWishlist = function (productId) {
         let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
         wishlist = wishlist.filter(item => item.id !== productId);
@@ -38,6 +35,5 @@ document.addEventListener('DOMContentLoaded', function () {
         displayWishlist();
     };
 
-    // Display wishlist when page loads
     displayWishlist();
 });

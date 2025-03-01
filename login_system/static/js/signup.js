@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
-    // Password toggle functionality
     function setupPasswordToggle(passwordId, toggleId) {
         const passwordInput = document.getElementById(passwordId);
         const toggleButton = document.getElementById(toggleId);
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
 
-        // Get all form values
         const firstName = document.getElementById('firstName').value.trim();
         const lastName = document.getElementById('lastName').value.trim();
         const email = document.getElementById('email').value.trim();
@@ -42,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.getElementById('password').value;
         const confirmPassword = document.getElementById('confirmPassword').value;
 
-        // Validation
         if (!firstName || !lastName || !email || !phone || !password || !confirmPassword) {
             showMessage('Please fill in all fields', true);
             return;
@@ -98,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Clear message when user starts typing
     const inputs = form.querySelectorAll('input');
     inputs.forEach(input => {
         input.addEventListener('input', () => {

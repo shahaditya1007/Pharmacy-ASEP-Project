@@ -1,4 +1,3 @@
-// Sticky Navbar on Scroll
 window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -8,7 +7,6 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Loader functionality with customizable duration
 window.addEventListener('load', () => {
     const loader = document.querySelector('.loader-wrapper');
     const duration = parseInt(loader.dataset.duration) || 300; 
@@ -19,7 +17,6 @@ window.addEventListener('load', () => {
 });
     
 
-// Smooth Scroll for Navbar Links
 document.querySelectorAll('.navbar ul li a').forEach(link => {
     link.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');
@@ -33,7 +30,6 @@ document.querySelectorAll('.navbar ul li a').forEach(link => {
     });
 });
 
-// Scroll Animation for Features
 const features = document.querySelectorAll('.feature');
 window.addEventListener('scroll', () => {
     const triggerBottom = window.innerHeight / 5 * 4;
@@ -61,10 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 isSoldOut: productCard.querySelector('.sold-out') !== null
             };
 
-            // Get existing wishlist or initialize empty array
             let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-            // Check if item already exists in wishlist
             if (!wishlist.some(item => item.id === product.id)) {
                 wishlist.push(product);
                 localStorage.setItem('wishlist', JSON.stringify(wishlist));

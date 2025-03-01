@@ -43,7 +43,7 @@ def signup():
         return redirect(url_for('signup_page'))
     
     hashed_password = generate_password_hash(data['password'], method='pbkdf2:sha256')
-    print(f"[DEBUG] Hashed Password Stored: {hashed_password}")  # Debugging ke liye
+    print(f"[DEBUG] Hashed Password Stored: {hashed_password}")  
     
     new_user = User(
         first_name=data['first_name'],
@@ -66,7 +66,7 @@ def login():
     
     user = User.query.filter((User.email == user_input) | (User.phone == user_input)).first()
     if user:
-        print(f"[DEBUG] Stored Hashed Password: {user.password}")  # Debugging ke liye
+        print(f"[DEBUG] Stored Hashed Password: {user.password}")
         print(f"[DEBUG] Entered Password: {password}")
         
         if check_password_hash(user.password, password):

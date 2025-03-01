@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Ensure header and footer are loaded before JS execution
     function waitForElement(selector, callback) {
         const observer = new MutationObserver((mutations, obs) => {
             if (document.querySelector(selector)) {

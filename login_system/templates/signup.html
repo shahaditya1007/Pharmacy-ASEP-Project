@@ -20,7 +20,6 @@
                 <p>Fill in your details to get started</p>
             </div>
 
-            <!-- Flash Messages -->
             <div>
                 {% with messages = get_flashed_messages(with_categories=true) %}
                     {% if messages %}
@@ -31,7 +30,6 @@
                 {% endwith %}
             </div>
 
-            <!-- Signup Form -->
             <div id="messageContainer" class="message-container"></div>
             <form id="signupForm" action="{{ url_for('signup') }}" method="POST">
                 <div class="form-row">

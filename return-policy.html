@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/css/return-policy.css">
 </head>
 <body>
-    <!-- Return & Refund Policy Section -->
     <main>
         <section class="policy-container">
             <div class="container">
@@ -75,16 +74,13 @@
         </section>
     </main>
 
-    <!-- Common header and footer -->
     <script>
-        // Load common header
         fetch('header.html')
           .then(response => response.text())
           .then(data => {
             document.body.insertAdjacentHTML('afterbegin', data);
           });
       
-        // Load common footer
         fetch('footer.html')
           .then(response => response.text())
           .then(data => {
@@ -92,7 +88,6 @@
           });
     </script>
 
-    <!-- Bootstrap & JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 

@@ -45,14 +45,12 @@
     </main>
     <script src="js/delivery.js"></script>
     <script>
-    // Load common header
     fetch('header.html')
       .then(response => response.text())
       .then(data => {
         document.body.insertAdjacentHTML('afterbegin', data);
       });
   
-    // Load common footer
     fetch('footer.html')
       .then(response => response.text())
       .then(data => {

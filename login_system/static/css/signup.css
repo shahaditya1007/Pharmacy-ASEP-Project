@@ -1,4 +1,3 @@
-/* Additional styles for signup page */
 .form-row {
     display: flex;
     gap: 20px;
@@ -24,7 +23,6 @@
     color: #ff6b3d;
 }
 
-/* Responsive adjustments */
 @media (max-width: 480px) {
     .form-row {
         flex-direction: column;
@@ -36,7 +34,6 @@
     }
 }
 
-/* Override login card max-width for signup */
 .login-card {
     max-width: 500px;
 }

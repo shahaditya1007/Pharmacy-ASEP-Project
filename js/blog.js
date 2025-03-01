@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Function to load blog content based on page number
     function loadBlogContent(page) {
         const blogContent = document.getElementById('blog-content');
         blogContent.innerHTML = '';
@@ -131,7 +130,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         blogContent.innerHTML = content;
 
-        // Add click handlers for read more buttons
         document.querySelectorAll('.read-more').forEach(button => {
             button.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -151,10 +149,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Load initial blog content for page 1
     loadBlogContent(1);
 
-    // Add click handlers for pagination links
     document.querySelectorAll('.page-link').forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -163,7 +159,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Set copyright year
     const yearElement = document.getElementById('year');
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();

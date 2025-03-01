@@ -1,13 +1,13 @@
 import sqlite3
 
-DB_NAME = "users.db"  # Database ka naam
+DB_NAME = "users.db" 
 
 def fetch_users():
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
 
     try:
-        cursor.execute("SELECT * FROM user")  # Table ka naam "User" hai
+        cursor.execute("SELECT * FROM user")  
         rows = cursor.fetchall()
 
         if rows:
@@ -18,9 +18,8 @@ def fetch_users():
             print("No users found in the database.")
 
     except sqlite3.OperationalError as e:
-        print("Error:", e)  # Agar table nahi mile toh error show karega
+        print("Error:", e)  
 
     conn.close()
 
-# Function ko call karne ke liye
 fetch_users()

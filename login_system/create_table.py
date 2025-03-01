@@ -5,7 +5,6 @@ DB_NAME = "users.db"
 conn = sqlite3.connect(DB_NAME)
 cursor = conn.cursor()
 
-# Table create karne ka SQL query
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS User (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
