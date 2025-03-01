@@ -47,13 +47,13 @@ document.addEventListener('DOMContentLoaded', function () {
     wishlistButtons.forEach(button => {
         button.addEventListener('click', function (e) {
             e.preventDefault();
-            const productCard = this.closest('.product-card');
+            const productCard = this.closest('.card');
 
             const product = {
                 id: productCard.dataset.id,
-                title: productCard.querySelector('p').textContent,
-                price: productCard.querySelector('.price').textContent,
-                image: productCard.querySelector('img').src,
+                title: productCard.querySelector('h3').textContent,
+                price: productCard.querySelector('p').textContent,
+                image: productCard.querySelector('img') ? productCard.querySelector('img').src : '',
                 isSoldOut: productCard.querySelector('.sold-out') !== null
             };
 
