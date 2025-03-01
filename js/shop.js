@@ -16,20 +16,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const shopItems = document.querySelectorAll('.shop-item');
     
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            
-            const category = btn.dataset.category;
-            
+    filterBtns.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.getAttribute('data-category');
             shopItems.forEach(item => {
-                if (category === 'all' || item.dataset.category === category) {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
                     item.style.display = 'block';
                 } else {
                     item.style.display = 'none';
                 }
             });
+            
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
         });
     });
 
