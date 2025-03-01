@@ -25,7 +25,6 @@
     margin-bottom: 20px;
 }
 
-/* Content Sections */
 .about-content {
     padding: 50px 0;
 }
@@ -55,7 +54,6 @@
     margin-bottom: 20px;
 }
 
-/* Timeline */
 .timeline {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -71,7 +69,6 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Values Grid */
 .values-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -98,7 +95,6 @@
     margin-bottom: 20px;
 }
 
-/* Goals Section */
 .goals {
     padding: 60px 0;
     margin-top: 40px;
@@ -153,7 +149,6 @@
     line-height: 1.6;
 }
 
-/* Tech Innovation Section */
 .tech-innovation {
     padding: 60px 0;
 }
@@ -204,8 +199,6 @@
     font-size: 0.9em;
     line-height: 1.6;
 }
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .mission-vision,
     .values-grid,
@@ -223,7 +216,6 @@
     }
 }
 
-/* Responsive Design for Goals */
 @media (max-width: 1024px) {
     .goals-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -244,7 +236,6 @@
     }
 }
 
-/* Responsive Design for Tech Innovation */
 @media (max-width: 992px) {
     .tech-grid {
         grid-template-columns: repeat(2, 1fr);

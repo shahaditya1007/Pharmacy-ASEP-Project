@@ -1,4 +1,3 @@
-/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +13,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Top Bar */
 .top-bar {
     background-color: #f8f8f8;
     color: white;
@@ -30,7 +28,6 @@ body {
     all: unset;
 }
 
-/* Top Bar animation */
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -45,7 +42,6 @@ body {
     }
 }
 
-/* Navbar Styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -110,7 +106,6 @@ body {
     width: 40px;
 }
 
-/* Login Button Styles */
 .nav-link.login-btn {
     color: #fe792c !important;
     padding: 8px 20px;
@@ -133,7 +128,6 @@ body {
     display: none;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .navbar-nav {
         display: flex;

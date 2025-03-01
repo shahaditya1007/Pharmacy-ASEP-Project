@@ -1,4 +1,3 @@
-/* General Reset */
 *{
     margin: 0;
     padding: 0;
@@ -13,8 +12,6 @@
     transition: all 0.3s ease;
   }
   
-  
-  /* Mobile Menu Toggle */
   .menu-toggle {
     display: none;
     font-size: 24px;
@@ -22,7 +19,6 @@
     cursor: pointer;
   }
   
-  /* Responsive Design */
   @media (max-width: 768px) {
     .navbar {
       display: flex;
@@ -54,7 +50,6 @@
     }
   }
   
-/* Track Order Section */
 .track-order-container {
     text-align: center;
     padding: 50px 20px;
@@ -93,11 +88,10 @@
     cursor: pointer;
 }
 
-.track-order-container button:hover {
+track-order-container button:hover {
     background-color: #2575fc;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .navbar-nav {
         text-align: center;

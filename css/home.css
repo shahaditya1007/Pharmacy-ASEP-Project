@@ -1,4 +1,3 @@
-/* General Styling */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +13,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Hover Animation */
 .navbar ul li a::after {
   content: '';
   position: absolute;
@@ -30,7 +28,6 @@ body {
   width: 100%;
 }
 
-/* Mobile Menu Toggle */
 .menu-toggle {
   display: none;
   font-size: 24px;
@@ -38,7 +35,6 @@ body {
   cursor: pointer;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
     display: flex;
@@ -69,9 +65,6 @@ body {
     display: flex;
   }
 }
-
-
-/* Discount Animation */
 
 .discount {
   font-weight: bold;
@@ -121,8 +114,6 @@ body {
   }
 }
 
-/* Hero Section */
-
 .hero {
   display: flex;
   justify-content: space-between;
@@ -160,7 +151,6 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Hero Image Effects */
 .hero-image img {
   max-width: 20vw;
   transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
@@ -172,7 +162,6 @@ body {
   opacity: 0.9;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
@@ -229,7 +218,6 @@ body {
   }
 }
 
-/* Features Section */
 .features {
   display: flex;
   justify-content: space-around;
@@ -262,7 +250,6 @@ body {
   font-size: 14px;
 }
 
-/* Promotions Section */
 .promotions {
   display: flex;
   flex-wrap: wrap;
@@ -319,7 +306,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .promo-card {
     width: 70%;
@@ -353,7 +339,6 @@ body {
   }
 }
 
-/* Products Section */
 .products {
   display: flex;
   justify-content: space-around;
@@ -473,7 +458,6 @@ body {
   cursor: pointer;
 }
 
-/* Featured Items Section */
 #featured-items {
   background-color: #f9f9f9;
   padding: 30px;
@@ -535,7 +519,6 @@ body {
   color: #ff5733;
 }
 
-/* Sold-Out Badge */
 .sold-out {
   position: absolute;
   top: 10px;
@@ -549,7 +532,6 @@ body {
   z-index: 999;
 }
 
-/* Button Effect */
 .featured-item button {
   background-color: #4CAF50;
   border: none;
@@ -586,7 +568,6 @@ body {
   border-radius: 5px;
 }
 
-/* Loader styles */
 .loader-wrapper {
     position: fixed;
     top: 0;
